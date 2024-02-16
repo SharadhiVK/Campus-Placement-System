@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "campus/base.html" %}
+
+{%block body_block%}
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          
+            <br><br>
+            <h2>DEPARTMENT LOGIN HERE!</h2>
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+
+  <div class="jumbotron">
+      <table class="hi">
+          <tr>
+      
+           <form method="post">
+      {% csrf_token %}
+      {{form.as_table}}
+      {% csrf_token %}
+      
+          <tr>  <td><p><button type="submit"  class="btn btn-lg btn-primary  d-inline-flex "">Login</button></p></td></tr>
+      </form>
+              </tr>
+              <tr>
+              <td><center>
+      <a href="http://127.0.0.1:8000/dept/dept_register " class=" d-inline-flex "  style="color:green"><b>New user? Register here</b></a>
+              </center></td>
+      </tr>
+      </table>
+  </div>
+  
+</div>
+
+{% endblock %}

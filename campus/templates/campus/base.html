@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>CAMPUS PLACEMENT SYSTEM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "campus/fonts/icomoon/style.css" %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="{% static "campus/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "campus/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "campus/css/jquery-ui.css" %}">
+    <link rel="stylesheet" href="{% static "campus/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "campus/css/owl.theme.default.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "campus/css/animate.css" %}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css" >
+
+
+
+    <link rel="stylesheet" href="{% static "campus/fonts/flaticon/font/flaticon.css" %} >
+
+    <link rel="stylesheet" href="{% static "campus/css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "campus/css/style.css" %}">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+      <a class="navbar-brand" href="/"><strong style="color: white">Campus Placement System</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      {% comment %} <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item {% block homeactive %} {% endblock homeactive %}">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item {% block aboutactive %} {% endblock aboutactive %}">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item {% block blogactive %} {% endblock blogactive %}">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item {% block contactactive %} {% endblock contactactive %}">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li> 
+  
+        </ul> {% endcomment %}
+        <!-- Button to trigger Login modal -->
+        {% if user.is_authenticated %}
+        {% comment %} Put the Code for user {% endcomment %}
+
+         {% comment %} <li>
+          <a href=" http://127.0.0.1:8000/company/company_login/">Company</a>
+        </li>  {% endcomment %}
+      
+      <li><a href="student_login/">Student</a></li>
+      <li><a href="dept_login/">Department</a></li>
+      <li><a href="admin/">Admin</a></li>
+      <li><a href="/quizindex">Quiz</a></li>
+      
+      
+        {% else %}
+        <li><a style="color: white" href="student_login/">Candidate Login</a></li>
+
+        <li><a style="color: white" href="admin/">Admin Login</a></li>
+        <li><a style="color: white" href="dept_login/">Department Login</a></li>
+        
+        <!-- Button to trigger SignUp modal -->
+        
+        {% endif %}
+        
+        <div class="ml-auto form-inline">
+        <form method="get" action="/search" class=" my-2 my-lg-0 mx-3">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query"
+            id="query">
+          <button class="btn btn-outline-success my-2 my-sm-0" style="color:white" type="submit">Search</button>
+        </form>
+        {% comment %} <a href="/admin" role="button" target="_blank" class="btn btn-success m-2 my-sm-0">Admin Panel</a> {% endcomment %}
+  
+        {% comment %} {% if user.is_authenticated %}
+        <ul class="navbar-nav mr-2">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Welcome {{request.user}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/logout">Logout</a> 
+          </div>
+        </li>
+        </ul> {% endcomment %}
+        <ul class="site-menu js-clone-nav d-none d-lg-block">
+            <li>{% if user.is_authenticated %}
+            <a href="/logout" style="color:white">  Hi {{ user.username }}! logout</a>
+            {% else %}
+            <p style="color: white">You are not logged in</p>
+            {% endif %}</a></li>
+  
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    {%block body_block%}
+
+
+    {% endblock %}
+
+    <footer class="site-footer" style="background-color: black;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="footer-heading mb-4 text-white">About</h3>
+            <p>This Project is about Campus recruitment System where both IT companies as well as student can register themselves on the on the same platform to interact with each other.</p>
+            <p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="https://sdmcet.ac.in/">SDMCET Website</a></li>
+                    <li><a href="#">Companies</a></li>
+                    <li><a href="#">Jobs</a></li>
+
+                    
+                    <li><a href="/contact">Contact us</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-6">
+                <h3 class="footer-heading mb-4 text-white">Categories</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Full Time</a></li>
+                    <li><a href="#">Freelance</a></li>
+                    <li><a href="#">Temporary</a></li>
+                    <li><a href="#">Internship</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-2">
+            <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
+              <div class="col-md-12">
+                <p>
+                  <a href="https://www.facebook.com/SdmCollegeofEngineering/" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/iitbhu_varanasi?lang=en" class="p-2"><span class="icon-twitter"></span></a>
+                  <a href="https://www.instagram.com/technexiitbhu/?hl=en" class="p-2"><span class="icon-instagram"></span></a>
+                  <a href="https://www.youtube.com/channel/UClQf58OQvm6OkGbQARqqhMg" class="p-2"><span class="icon-youtube"></span></a>
+
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | Campus Placement System
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <script src="{% static "campus/js/jquery-3.3.1.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery-ui.js" %}"></script>
+  <script src="{% static "campus/js/popper.min.js" %}"></script>
+  <script src="{% static "campus/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "campus/js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery.countdown.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "campus/js/bootstrap-datepicker.min.js" %}"></script>
+  <script src="{% static "campus/js/aos.js" %}"></script>
+  <script src="{% static "campus/js/mediaelement-and-player.min.js" %}"></script>
+
+  <script src="{% static "campus/js/main.js" %}"></script>
+  </body>
+</html>

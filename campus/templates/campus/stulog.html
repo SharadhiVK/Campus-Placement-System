@@ -1,0 +1,56 @@
+<!Doctype html>
+{% extends "campus/base.html" %}
+
+{%block body_block%}
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          
+            <br>
+            <h2> Hello {{ user.username|title }}!</h2>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="container">
+
+  <div class="jumbotron">
+      <table class="pos2">
+          <tr>
+              <td  ><a href="dispstu" class="btn btn-lg btn-primary mx-5 d-inline-flex "><b style="font-size: 2rem">View profile</b></a></td></tr><tr>
+          <td ><a href="usd" class="btn btn-lg btn-primary mx-5 d-inline-flex"><b style="font-size: 2rem">Update Profile</b></a></td></tr><tr>
+      <!-- <td ><a href="applyjob " class="btn btn-lg btn-primary mx-5 d-inline-flex"><b style="font-size: 2rem">Apply for company</b></a></td></tr> -->
+      <!-- <td ><a href=" http://127.0.0.1:8000/student/student_login/applyjob " class="btn btn-lg btn-primary mx-5 d-inline-flex"><b style="font-size: 2rem">Resume</b></a></td></tr> -->
+      
+      
+      <tr>
+      <td> <a href="myresume" class="btn btn-lg btn-primary mx-5 d-inline-flex" ><b style="font-size: 2rem">My Resume</b></a></td>
+      </tr> 
+      <tr>
+        <td><a href="placementPrep" class="btn btn-lg btn-primary mx-5 d-inline-flex"><b style="font-size: 2rem">Placement Questionnaire</b></a></td>
+      </tr>
+      <!-- <tr>
+        <td><a href="quizindex" class="btn btn-lg btn-primary mx-5 d-inline-flex"><b style="font-size: 2rem">Quiz</b></a></td>
+      </tr>
+      <tr> -->
+        <td><a href="offerletter" class="btn btn-lg btn-primary mx-5 d-inline-flex"><b style="font-size: 2rem">Offer Letter</b></a></td>
+      </tr>
+      <tr>
+        <td><a href="display" class="btn btn-lg btn-primary mx-5 d-inline-flex"><b style="font-size: 2rem">Display</b></a></td>
+      </tr>
+      <tr>
+        <td><a href="apply" class="btn btn-lg btn-primary mx-5 d-inline-flex"><b style="font-size: 2rem">Apply</b></a></td>
+      </tr>
+
+      </table>
+  
+  </div>
+  
+</div>
+
+{% endblock %}
+
+
+
+

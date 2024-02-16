@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "campus/base.html" %}
+
+{%block body_block%}
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+<form action="{% url 'upload'  %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="mb-3"  style="text-align:center;">
+      <h3>JAVA PDFS</h3>
+    <input type="text" name="filename" placeholder="Enter file name">
+    <input type="file" multiple name="uploadfiles">
+  <button type="submit" class="btn btn-success">File Upload</button>
+ 
+  </div>
+</form>
+</br>
+</br>
+</br>
+</br>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'admin/base.html' %}
+
+{% block branding %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #444;
+        }
+
+        .topnav div {
+            float: left;
+            color: #FFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .navbar .navbar-nav > li {
+            padding-left:30px;
+            padding-right:30px;
+            display:inline;
+            position:relative;
+            display:block;
+            float:left;
+            vertical-align: top;
+            }
+    </style>
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class='nav navbar-nav navbar-inverse navbar-custom'>
+      <li class="nav-item" style="list-style-type: none;">
+        <a href="http://127.0.0.1:8000">  CAMPUS PLACEMENT SYSTEM</a>
+      </li>
+      <li class="nav-item" style="list-style-type: none;">
+        <a href="http://127.0.0.1:8000/student/student_login/">  STUDENT</a>
+      </li>
+      <li class="nav-item" style="list-style-type: none;">
+        <a href=" http://127.0.0.1:8000/dept/dept_login/">  DEPARTMENT</a>
+      </li>
+      <li class="nav-item" style="list-style-type: none;">
+        <a href="/view">  Student-Company List</a>
+      </li>
+
+    </ul>
+  </nav>
+
+{% endblock %}
+{% load static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static 'admin/style.css' %}" />
+{% endblock %}

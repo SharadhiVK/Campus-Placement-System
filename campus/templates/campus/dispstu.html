@@ -1,0 +1,104 @@
+
+{% extends "campus/base.html" %}
+
+{% block body_block %}
+
+    <div class="container-fluid">
+      
+          <div class="row">
+              
+            </div>
+          </div>
+          <div class="container">
+          <div class="jumbotron">
+              <form method="get">
+                  {% csrf_token %}
+                  <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;">PROFILE</h1>
+                  <table width=100% cellpadding="10" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                      <tr>
+                          <td>Usn: </td>
+                          <td><b>{{post.username}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Name: </td>
+                          <td><b>{{post.name}}</b><td>
+                      </tr>
+                      <tr>
+                          <td>Email Address: </td>
+                          <td><b>{{post.email}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Phone Number: </td>
+                          <td><b>{{post.phone_number}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Father's Name: </td>
+                          <td><b>{{post.fathers_name}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Mother's Name: </td>
+                          <td><b>{{post.mothers_name}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Gender: </td>
+                          <td><b>{{post.gender}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Place: </td>
+                          <td><b>{{post.place}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Branch: </td>
+                          <td><b>{{post.branch}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Btech(cgpa): </td>
+                          <td><b>{{post.cgpa_Btech}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>10 class(cgpa): </td>
+                          <td><b>{{ post.class_10_cgpa}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>12 class percent: </td>
+                          <td><b>{{ post.class_12_percentage}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Certifications count: </td>
+                          <td><b>{{post.certifications_count}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Internship: </td>
+                          <td><b>{{ post.internship}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Languages: </td>
+                          <td><b>{{ post.languages}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Skills: </td>
+                          <td><b>{{post.skills}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>Hobbies: </td>
+                          <td><b>{{post.hobbies}}</b></td>
+                      </tr>
+                      <tr>
+                          <td>About: </td>
+                          <td><b>{{post.about}}</b></td>
+                      </tr>
+                  </table>
+              
+              </form>
+                    
+          </div>
+          
+
+
+      </div>
+      
+
+
+ 
+
+{% endblock body_block %}

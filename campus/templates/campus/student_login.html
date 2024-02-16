@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends "campus/base.html" %}
+
+{%block body_block%}
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          
+            <br> <br>
+            <h2>STUDENT LOGIN HERE!</h2>
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+
+  <div class="jumbotron">
+      <table class="hi">
+          <tr>
+      
+           <form method="post">
+      {% csrf_token %}
+      {{form.as_table}}
+      
+      
+          <tr>  <td><p><button type="submit"  class="btn btn-lg btn-primary  d-inline-flex "">Login</button></p></td></tr>
+      </form>
+              </tr>
+              <tr>
+              <td><center>
+      <a href="http://127.0.0.1:8000/student_register " class=" d-inline-flex "  style="color:green"><b>New user? Register here</b></a>
+              </center>  </td>
+              <td></td>
+              <td><a href="/password_reset" style="color: green"><b>Forgot password?</b></a></td>
+                
+      </tr>
+      </table>
+  </div>
+  
+</div>
+
+{% endblock %}
+
+
+
+

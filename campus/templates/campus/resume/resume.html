@@ -1,0 +1,52 @@
+<table cellspacing = '20'>
+    <tr>
+        {% comment %} <td><img src="shivani-modified.png" alt="Shivani profile picture"></td> {% endcomment %}
+        {%for u in user_profile%}
+        <td><h1>{{u.name}}</h1>
+            <h4>Student</h4>
+            <p>{{u.sop}}</p>
+        {%endfor%}
+            {% comment %} <p>I am an engineering student. I am studying at SDMCET, Dharwad!</p></td> {% endcomment %}
+    </tr>
+</table>
+
+<hr>
+<h3>Interests</h3>
+<ul>
+    <li>Java</li>
+    <li>Python</li>
+</ul>
+<h3>Work Experience</h3>
+<!--Table Contents-->
+<table border = '1'>
+    <tr>
+        <th>Dates</th>
+        <th>Work</th>
+    </tr>
+    <tr>
+        <td>2010-2013</td>
+        {% comment %} <td>Lead Developer at Tempo App</td> {% endcomment %}
+        <td>Hello</td>
+    
+    </tr>
+        
+    <tr>
+        <td>2010</td>
+        <td>Amazon Developer</td>
+    </tr>
+</table>
+{% comment %} <a href="hobbies.html">My Hobbies</a>
+<a href="contact_me.html">My Contact details</a> {% endcomment %}
+
+<hr>
+<h1>Skills</h1>
+<table cellspacing='10'>
+    <tr>
+        <td>Photography</td>
+        <td>★★★★☆</td>
+    </tr>
+    <tr>
+        <td>Gardening</td>
+        <td>★★★☆☆</td>
+    </tr>
+</table>
